@@ -28,22 +28,30 @@ symbols_database = 'ABCDEFGHIJKLMNOPQRSTUVXYZ'\
                    '1234567890'
 
 def encrypt():
+    #This variable will hold the encrypted message
     encrypted_message = ''
-
+    
+    #We iterate through every letter in our message and encrypt it
     for letter in message:
-
+        
+        #Here the ascii alphabet we saved earlier comes in hand
         if letter in symbols_database:
             letterIndex = symbols_database.find(letter)
+            
+            #The results will vary depeniding on what shift key we use
             encrypted_letterIndex = letterIndex + shift_key
-
+            
+            #The if and elif statements prove useful in case the encrypted_letterIndex integer
+            #extends outside the length of the ascii alphabet string
             if encrypted_letterIndex >= len(symbols_database):
                 encrypted_letterIndex = encrypted_letterIndex - len(symbols_database)
 
             elif encrypted_letterIndex < 0:
                  encrypted_letterIndex = encrypted_letterIndex + len(symbols_database)
-
+            
             encrypted_message = encrypted_message + symbols_database[encrypted_letterIndex]
-
+        
+        #In case there are character we have not included in our symbols_database
         else:
             encrypted_message = encrypted_message + letter
 
