@@ -23,8 +23,8 @@ shift_key = int(input('> '))
 
 message = message.rstrip()
 #encrypted_message = None
-symbols_database = 'ABCDEFGHIJKLMNOPQRSTUVXYZ'\
-                   'abcdefghijklmnopqrstuvxyz'\
+symbols_database = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'\
+                   'abcdefghijklmnopqrstuvwxyz'\
                    '1234567890'
 
 def encrypt():
