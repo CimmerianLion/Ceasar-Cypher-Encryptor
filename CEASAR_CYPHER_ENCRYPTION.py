@@ -38,7 +38,7 @@ def encrypt():
         if letter in symbols_database:
             letterIndex = symbols_database.find(letter)
             
-            #The results will vary depeniding on what shift key we use
+            #The results will vary depending on what shift key we use
             encrypted_letterIndex = letterIndex + shift_key
             
             #The if and elif statements prove useful in case the encrypted_letterIndex integer
@@ -51,7 +51,7 @@ def encrypt():
             
             encrypted_message = encrypted_message + symbols_database[encrypted_letterIndex]
         
-        #In case there are character we have not included in our symbols_database
+        #In case there are characters we have not included in our symbols_database
         else:
             encrypted_message = encrypted_message + letter
 
